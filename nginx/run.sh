@@ -1,0 +1,1 @@
+docker run -p 80:80 --name simple-nginx simple-nginx

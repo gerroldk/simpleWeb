@@ -1,0 +1,23 @@
+services:
+  app:
+    image: gerroldk/simple-web
+    ports:
+      - "8000:5000"
+    networks:
+      - default
+    volumes:
+      - ./config:/config
+  nginx:
+    image: gerroldk/simple-nginx
+    ports:
+      - "80:80"
+    networks:
+      - default
+    depends_on:
+      - app
+
+networks:
+  local:
+    driver: bridge
+
+
