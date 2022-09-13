@@ -1,0 +1,1 @@
+docker run -p 8000:5000 -v $(pwd)/../config:/config --name simple-web simple-web
